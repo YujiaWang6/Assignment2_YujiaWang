@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "fastFood";
+}
+
+<h2>Are you ready to calculate the Calories?</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Name of food</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="4">Burger</td>
+            <td>
+                1 - Cheeseburger (461 Calories)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2 - Fish Burger (431 Calories)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3 - Veggie Burger (420 Calories)
+            </td>
+        </tr>
+        <tr>
+            <td>4 - no burger</td>
+        </tr>
+        <tr>
+            <td rowspan="4">Drink</td>
+            <td>
+                1 - Soft Drink (130 Calories)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2 - Orange Juice (160 Calories)
+            </td>
+        </tr>
+        <tr>
+            <td>3 - Milk (118 Calories)</td>
+        </tr>
+        <tr>
+            <td>
+                4 - no drink
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="4">Side Order</td>
+            <td>
+                1 - Fries (100 Calories)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2 - Baked Potato (57 Calories)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3 - Chef Salad (70 Calories)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                4 - no side order
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="4">Dessert</td>
+            <td>1 - Apple Pie (167 Calories)</td>
+        </tr>
+        <tr>
+            <td>
+                2 - Sundae (266 Calories)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3 - Fruit Cup (75 Calories)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                4 - No Dessert
+            </td>
+        </tr>
+    </tbody>
+</table>
+<form action="caloriesCal" method="GET">
+    <fieldset>
+        <legend>Choose your order!</legend>
+        <div>
+            <label>Your name:</label>
+            <input type="text" name="customerName" placeholder="Please enter your name" />
+        </div>
+        <div>
+            <label>Choose your burger:</label>
+            <input type="number" name="burger" min="1" max="4" placeholder="index" />
+        </div>
+        <div>
+            <label>Choose your drink:</label>
+            <input type="number" name="drink" min="1" max="4" placeholder="index" />
+        </div>
+        <div>
+            <label>Choose your side order:</label>
+            <input type="number" name="side" min="1" max="4" placeholder="index" />
+        </div>
+        <div>
+            <label>Choose your dessert:</label>
+            <input type="number" name="dessert" min="1" max="4" placeholder="index" />
+        </div>
+        <div>
+            <input type="submit" value="startCalculate" />
+        </div>
+    </fieldset>
+</form>
+

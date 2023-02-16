@@ -159,6 +159,8 @@
     <Compile Include="Controllers\J1FastFoodController.cs" />
     <Compile Include="Controllers\J2RollTheDiceController.cs" />
     <Compile Include="Controllers\J3AreWeThereYet2018Controller.cs" />
+    <Compile Include="Controllers\MVCJ1FastFoodController.cs" />
+    <Compile Include="Controllers\MVCJ2RollTheDiceController.cs" />
     <Compile Include="Controllers\testController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -216,6 +218,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\MVCJ1FastFood\fastFood.cshtml" />
+    <Content Include="Views\MVCJ1FastFood\caloriesCal.cshtml" />
+    <Content Include="Views\MVCJ2RollTheDice\dice.cshtml" />
+    <Content Include="Views\MVCJ2RollTheDice\roll.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

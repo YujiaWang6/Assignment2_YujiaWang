@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "dice";
+}
+
+<h2>Get the sum of 10!</h2>
+<p>There are 2 dices with number of sides m and n respectively. How many ways to get the sum 10?</p>
+<form action="roll" method="GET">
+    <div>
+        <label>Please enter the number of sides for first dice (m):</label>
+        <input type="number" name="m" min="1" />
+    </div>
+    <div>
+        <label>Please enter the number of sides for second dice (n):</label>
+        <input type="number" name="n" min="1" />
+    </div>
+    <div>
+        <input type="submit" value="Take a guess and run!" />
+    </div>
+</form>
+
