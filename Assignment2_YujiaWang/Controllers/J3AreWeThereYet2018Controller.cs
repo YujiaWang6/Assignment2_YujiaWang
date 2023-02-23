@@ -13,10 +13,10 @@ namespace Assignment2_YujiaWang.Controllers
         /// There are 5 cities along the road and a person is walking on the road and recording the distance between each pair of consecutive cities.
         /// This program are taking 4 distances between consecutive pairs of consecutive cities as input and output a 5x5 tables containing the distance between city i(from 1 to 5) to each other city(from 1 to 5)
         /// </summary>
-        /// <param name="d1">the distance between the first city to the second city</param>
-        /// <param name="d2">the distance between the second city to the third city</param>
-        /// <param name="d3">the distance between the third city to the fourth city</param>
-        /// <param name="d4">the distance between the fourth city to the fifth city</param>
+        /// <param name="d1">Integer represents the distance between the first city to the second city</param>
+        /// <param name="d2">Integer represents the distance between the second city to the third city</param>
+        /// <param name="d3">Integer represents the distance between the third city to the fourth city</param>
+        /// <param name="d4">Integer represents the distance between the fourth city to the fifth city</param>
         /// <returns>a 5x5 tables including the distance between object city(from 1 to 5) to each other city(from 1 to 5)</returns>
         /// <example>
         /// POST: api/J3AreWeThereYet2018/Distance/3/10/12/5   -> 0 3 13 25 30
@@ -95,6 +95,17 @@ namespace Assignment2_YujiaWang.Controllers
 
     }
 }
+
+
+//Questions: When I use the terminal to output the result,
+//I can get [[0,3,13,25,30],[3,0,10,22,27],[13,10,0,12,17],[25,22,12,0,5],[30,27,17,5,0]] from the terminal.
+//However, even if I change to GET method and try to run in the url. The error message occured saying
+//<ExceptionMessage>The 'ObjectContent`1' type failed to serialize the response body for content type 'application/xml; charset=utf-8'.</ExceptionMessage>
+//<ExceptionType>System.InvalidOperationException</ExceptionType>
+//<ExceptionMessage>Multi-dimensional arrays are not supported.</ExceptionMessage>
+//How can I solve this? 
+
+
 
 
 

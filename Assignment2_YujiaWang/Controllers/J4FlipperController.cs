@@ -18,7 +18,7 @@ namespace Assignment2_YujiaWang.Controllers
         /// 1 2   ->  2 1     vertical flip
         /// 3 4       4 3
         /// </summary>
-        /// <param name="flip">enter the string with the instruction (eg:HVVVHHV)</param>
+        /// <param name="flip">Input the string with the instruction (eg:HVVVHHV)</param>
         /// <returns>The final position of all the numbers after flips</returns>
         /// <example>
         /// POST: api/J4Flipper/flipper/HV     ->  4 3

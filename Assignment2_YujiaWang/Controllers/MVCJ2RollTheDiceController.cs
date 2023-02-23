@@ -13,8 +13,8 @@ namespace Assignment2_YujiaWang.Controllers
         /// There are two dice, one dice has m sides (1, 2, 3 ... , m), another dice has n sides (1, 2, 3 ... , n).
         /// Write a program which determines how many ways the dices can be rolled the value of 10.
         /// </summary>
-        /// <param name="m">The number of side of the first dice</param>
-        /// <param name="n">The number of side of the second dice</param>
+        /// <param name="m">Integer represents the number of side of the first dice</param>
+        /// <param name="n">Integer represents the number of side of the second dice</param>
         /// <returns>A string about how many ways the two dices can be rolled the value of 10</returns>
         /// <example>GET ../localhost:xxxxx/MVCJ2RollTheDice/roll?m=6&n=8   -> There are 5 total ways to get the sum 10</example>
         /// <example>GET ../localhost:xxxxx/MVCJ2RollTheDice/roll?m=12&n=4   -> There are 4 ways to get the sum 10.</example>
