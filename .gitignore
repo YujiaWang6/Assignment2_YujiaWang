@@ -362,3 +362,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /Assignment2_YujiaWang/Controllers/MVCSAMPLEController.cs
+/Assignment2_YujiaWang/Views/MVCSAMPLE/J1SAMPLE.cshtml
