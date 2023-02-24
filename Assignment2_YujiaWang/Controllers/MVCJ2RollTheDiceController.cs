@@ -35,28 +35,8 @@ namespace Assignment2_YujiaWang.Controllers
         //page to show the result
         public ActionResult roll(int m, int n) 
         {
-            int count = 0;
-            string message = "";
-
-            while (m > 0)
-            {
-
-                for (int i = n; i > 0; i = i - 1)
-                {
-
-                    if (m + i == 10)
-                    {
-                        
-                        count = count + 1;
-                    }
-
-                }
-                m = m - 1;
-            }
-
-            message = "There are " + count.ToString() + " ways to get the sum 10.";
-
-            ViewData["message"]=message;
+            J2RollTheDiceController controller = new J2RollTheDiceController();
+            ViewBag.message = controller.DiceGame(m, n);
 
             return View();
         }

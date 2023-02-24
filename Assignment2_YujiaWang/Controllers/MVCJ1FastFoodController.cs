@@ -22,16 +22,16 @@ namespace Assignment2_YujiaWang.Controllers
         /// <param name="side"> Integer representing the index side choice</param>
         /// <param name="dessert"> Integer representing the index dessert choice</param>
         /// <returns>Return a string with the total Calories of the meal based on the input index of choice</returns>
-        /// <example>GET:localhost:xxxxx/MVCJ1FastFood/caloriesCal?customerName=Yujia&burger=4&drink=4&side=4&dessert=4 -> Hello, Yujia. Your total calorie count is 0
-        ///                                                                                                                Your burger calorie is: 0
-        ///                                                                                                                Your drink calorie is: 0
-        ///                                                                                                                Your side calorie is: 0
-        ///                                                                                                                Your dessert calorie is: 0  </example>
-        /// <example>GET:localhost:xxxxx/MVCJ1FastFood/caloriesCal?customerName=Yujia&burger=1&drink=2&side=3&dessert=4  -> Hello, Yujia. Your total calorie count is 691
-        ///                                                                                                                Your burger calorie is: 461
-        ///                                                                                                                Your drink calorie is: 160
-        ///                                                                                                                Your side calorie is: 70
-        ///                                                                                                                Your dessert calorie is: 0  </example>
+        /// <example>GET:localhost:xxxxx/MVCJ1FastFood/caloriesCal?customerName=Yujia&burger=4&drink=4&side=4&dessert=4 -> Hello, Yujia. Your total calorie count is 0 
+        ///                                                                                                                Your burger choice is: 4
+        ///                                                                                                                Your drink choice is: 4
+        ///                                                                                                                Your side choice is: 4
+        ///                                                                                                                Your dessert choice is: 4  </example>
+        /// <example>GET:localhost:xxxxx/MVCJ1FastFood/caloriesCal?customerName=Yujia&burger=1&drink=2&side=3&dessert=4  -> Hello, Yujia. Your total calorie count is 691  </example>
+        ///                                                                                                                 Your burger choice is: 1
+        ///                                                                                                                 Your drink choice is: 2
+        ///                                                                                                                 Your side choice is: 3
+        ///                                                                                                                 Your dessert choice is: 4  </example>
 
 
 
@@ -47,119 +47,13 @@ namespace Assignment2_YujiaWang.Controllers
         //page to get the result
         public ActionResult caloriesCal(string customerName, int burger, int drink, int side, int dessert)
         {
-          
-            int cheeseBurger = 461;
-            int fishBurger = 431;
-            int veggieBurger = 420;
-            int softDrink = 130;
-            int orangeJuice = 160;
-            int milk = 118;
-            int fires = 100;
-            int bakedPotato = 57;
-            int chefSalad = 70;
-            int applePie = 167;
-            int sundae = 266;
-            int fruitCup = 75;
-            int noChoice = 0;
-
-            int burgerCalories;
-            int drinkCalories;
-            int sideCalories;
-            int dessertCalories;
-            int totalCalories;
-            string message = "";
-
-
-            if (burger == 1)
-            {
-                burgerCalories = cheeseBurger;
-                ViewData["burger"] = cheeseBurger;
-            }
-            else if (burger == 2)
-            {
-                burgerCalories = fishBurger;
-                ViewData["burger"] = fishBurger;
-            }
-            else if (burger == 3)
-            {
-                burgerCalories = veggieBurger;
-                ViewData["burger"] = veggieBurger;
-            }
-            else
-            {
-                burgerCalories = noChoice;
-                ViewData["burger"] = noChoice;
-            }
-
-            if (drink == 1)
-            {
-                drinkCalories = softDrink;
-                ViewData["drink"] = softDrink;
-            }
-            else if (drink == 2)
-            {
-                drinkCalories = orangeJuice;
-                ViewData["drink"] = orangeJuice;
-
-            }
-            else if (drink == 3)
-            {
-                drinkCalories = milk;
-                ViewData["drink"] = milk;
-            }
-            else
-            {
-                drinkCalories = noChoice;
-                ViewData["drink"] = noChoice;
-            }
-
-            if (side == 1)
-            {
-                sideCalories = fires;
-                ViewData["side"] = fires;
-            }
-            else if (side == 2)
-            {
-                sideCalories = bakedPotato;
-                ViewData["side"] = bakedPotato;
-            }
-            else if (side == 3)
-            {
-                sideCalories = chefSalad;
-                ViewData["side"] = chefSalad;
-            }
-            else
-            {
-                sideCalories = noChoice;
-                ViewData["side"] = noChoice;
-            }
-
-            if (dessert == 1)
-            {
-                dessertCalories = applePie;
-                ViewData["dessert"] = applePie;
-            }
-            else if (dessert == 2)
-            {
-                dessertCalories = sundae;
-                ViewData["dessert"] = sundae;
-            }
-            else if (dessert == 3)
-            {
-                dessertCalories = fruitCup;
-                ViewData["dessert"] = fruitCup;
-            }
-            else
-            {
-                dessertCalories = noChoice;
-                ViewData["dessert"] = noChoice;
-            }
-
-            totalCalories = burgerCalories + drinkCalories + sideCalories + dessertCalories;
-            message = "Your total calorie count is " + totalCalories.ToString();
-
-            ViewData["customerName"] = customerName;
-            ViewData["message"] = message;
+            J1FastFoodController controller = new J1FastFoodController();
+            ViewBag.CustomerName = customerName;
+            ViewBag.Message = controller.Menu(burger, drink,side, dessert);
+            ViewBag.burger = burger;
+            ViewBag.drink = drink;
+            ViewBag.side = side;
+            ViewBag.dessert = dessert;
 
             return View();
         }

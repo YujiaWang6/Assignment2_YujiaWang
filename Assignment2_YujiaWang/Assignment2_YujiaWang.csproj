@@ -162,6 +162,7 @@
     <Compile Include="Controllers\J4FlipperController.cs" />
     <Compile Include="Controllers\MVCJ1FastFoodController.cs" />
     <Compile Include="Controllers\MVCJ2RollTheDiceController.cs" />
+    <Compile Include="Controllers\MVCSAMPLEController.cs" />
     <Compile Include="Controllers\testController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -223,6 +224,7 @@
     <Content Include="Views\MVCJ1FastFood\caloriesCal.cshtml" />
     <Content Include="Views\MVCJ2RollTheDice\dice.cshtml" />
     <Content Include="Views\MVCJ2RollTheDice\roll.cshtml" />
+    <Content Include="Views\MVCSAMPLE\J1SAMPLE.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
